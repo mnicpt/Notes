@@ -1,0 +1,11 @@
+{{master-header backButton=false editMode=model.editMode title='Folders'
+                numSelected=model.numSelected
+                edit=(action 'toggleEdit')}}
+
+<div class="notes">
+    {{#each model.folders as |folder|}}
+        {{note-row model=folder editMode=model.editMode selectRow=(action 'select')}}
+    {{/each}}
+</div>
+
+{{master-toolbar notes=model.notes editMode=model.editMode add=(action 'addFolder') delete=(action 'deleteFolders')}}

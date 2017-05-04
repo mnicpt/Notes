@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div class="master container">
+        {{outlet}}
+    </div>
+    <div class="detail container">
+        {{#if model.selectedNote}}
+            {{outlet 'detail'}}
+        {{else}}
+            <div class="detail_header">
+            </div>
+            <div class="detail_content">
+                <div class="default_note">
+                    +<br/>Note
+                </div>
+            </div>
+        {{/if}} 
+    </div>
+</div>
