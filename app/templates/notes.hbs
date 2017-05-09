@@ -4,7 +4,7 @@
 
 <div class="notes">
     {{#each model.folders as |folder|}}
-        {{note-row model=folder editMode=model.editMode selectRow=(action 'select')}}
+        {{note-row model=folder title=folder.title editMode=model.editMode selectRow=(action 'select')}}
     {{/each}}
 </div>
 

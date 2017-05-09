@@ -1,10 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    classNames: ['note_row'],
+    classNames: ['table_view_cell'],
     classNameBindings: ['selected'],
     model: null,
     editMode: false,
+    title: "",
+    subtitle: "",
     selected: Ember.computed.alias('model.selected'),
 
     actions: {
